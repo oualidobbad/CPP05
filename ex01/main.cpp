@@ -1,18 +1,13 @@
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 int main ()
 {
 	
 	try
 	{
-		Bureaucrat obj("oualid");
-		obj.setGrade(150);
-		std::cout << obj << std::endl;
-		obj.decrementGrade();
-		std::cout << obj << std::endl;
-		obj.decrementGrade();
-		std::cout << obj << std::endl;
+		Bureaucrat Bureaucrat1("oualid", 120);
+		Form form("Tax", 130, 120);
 
-		// obj.setGrade(0);
+		Bureaucrat1.signForm(form);
 	}
 	catch(std::exception& e)
 	{
@@ -24,3 +19,4 @@ int main ()
 	}
 
 }
+

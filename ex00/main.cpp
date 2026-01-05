@@ -4,15 +4,13 @@ int main ()
 	
 	try
 	{
-		Bureaucrat obj("oualid");
-		obj.setGrade(150);
+		Bureaucrat obj("oualid", 140);
 		std::cout << obj << std::endl;
 		obj.decrementGrade();
 		std::cout << obj << std::endl;
 		obj.decrementGrade();
 		std::cout << obj << std::endl;
 
-		// obj.setGrade(0);
 	}
 	catch(std::exception& e)
 	{

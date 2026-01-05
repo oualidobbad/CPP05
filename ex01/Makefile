@@ -1,16 +1,13 @@
-CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp Bureaucrat.cpp Form.cpp
 OBJ = $(SRC:.cpp=.o)
-NAME = bureaucrat
+NAME = form
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CPP) -o $@ $^
-
-%.o: %.cpp
-	$(CPP) $(CPPFLAGS) -c -o $@ $<
+	$(CXX) -o $@ $^
 
 clean:
 	rm -rf $(OBJ)
