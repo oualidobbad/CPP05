@@ -1,7 +1,6 @@
 #include "Form.hpp"
 
 // ==========================| Orthodox Canonical Form |=============================
-Form::Form(): name(""), isSigned(false), gradeSign(1), gradeExecute(1){}
 
 Form::Form(const std::string& name, int gSigne, int gExe): name(name), isSigned(false), gradeSign(gSigne), gradeExecute(gExe)
 {

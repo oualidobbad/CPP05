@@ -1,7 +1,7 @@
 #pragma once
 #include "Bureaucrat.hpp"
 
-class Form
+class AForm
 {
 	private:
 		const std::string name;
@@ -10,14 +10,19 @@ class Form
 		const int gradeExecute;
 
 	public:
-		Form(const std::string& name, int gSigne, int gExe);
-		Form(const Form& other);
-		Form &operator=(const Form& other);
-		~Form();
+		AForm();
+		AForm(const std::string& name, int gSigne, int gExe);
+		AForm(const AForm& other);
+		AForm &operator=(const AForm& other);
+		
 		const std::string& getName() const;
 		const bool& getIsSigned() const;
 		const int& getGradeSign() const;
 		const int& getGradeExecute() const;
+
+		virtual void execute(Bureaucrat const & executor) const = 0;
+		virtual ~AForm();
+		
 		void beSigned(Bureaucrat &b);
 
 		class GradeTooHighException: public std::exception{
@@ -31,5 +36,5 @@ class Form
 
 };
 
-std::ostream& operator<<(std::ostream& out, const Form& form);
+std::ostream& operator<<(std::ostream& out, const AForm& form);
 

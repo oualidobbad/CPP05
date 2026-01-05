@@ -1,7 +1,7 @@
 #include "Bureaucrat.hpp"
 int main ()
 {
-	
+
 	try
 	{
 		Bureaucrat obj("oualid", 10);
