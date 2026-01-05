@@ -23,7 +23,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 	return *this;
 }
 
-const std::string Bureaucrat::getName()
+const std::string Bureaucrat::getName() const
 {
 	return name;
 }
@@ -57,6 +57,24 @@ void Bureaucrat::signForm(AForm& form)
 		std::cout << name <<" couldn’t sign "<< form.getName() << " because " << e.what() << std::endl;
 	}
 }
+
+void Bureaucrat::executeForm(AForm const & form) const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << getName() + " executed " + form.getName() << std::endl;
+	}
+	catch(std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	catch(const char* msj)
+	{
+		std::cerr << msj << std::endl;
+	}
+}
+
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {

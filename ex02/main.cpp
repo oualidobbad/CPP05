@@ -1,10 +1,25 @@
 #include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include <ctime>
+#include <cstdlib>
 int main ()
 {
 
 	try
 	{
-		
+		std::srand(std::time(NULL));
+		// ShrubberyCreationForm shrubbery("home");
+		// PresidentialPardonForm p("hokoma");
+		RobotomyRequestForm r("oobbad");
+
+		AForm *form = &r;
+		Bureaucrat b("oualid", 6);
+
+		b.executeForm(*form);
+		b.signForm(*form);
+		b.executeForm(*form);
 	}
 	catch(std::exception& e)
 	{
@@ -14,6 +29,5 @@ int main ()
 	{
 		std::cerr << msj << std::endl;
 	}
-
 }
 

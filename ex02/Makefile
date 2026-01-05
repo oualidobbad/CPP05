@@ -1,6 +1,6 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = AForm.cpp main.cpp RobotomyRequestForm.cpp Bureaucrat.cpp  PresidentialPardonForm.cpp ShrubberyCreationForm.cpp
 OBJ = $(SRC:.cpp=.o)
 NAME = form
 

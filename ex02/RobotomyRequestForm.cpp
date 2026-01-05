@@ -1,5 +1,5 @@
 #include "RobotomyRequestForm.hpp"
-
+#include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string& target): AForm(target, 72, 45)
 {
@@ -9,6 +9,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other): AFor
 }
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other){
 	AForm::operator=(other);
+	return *this;
 }
 RobotomyRequestForm::~RobotomyRequestForm()
 {
@@ -23,7 +24,9 @@ void RobotomyRequestForm::execute(Bureaucrat const& executor) const
 
 	std::cout << "hererererererererererererererererererererereererererererer" << std::endl;
 
-	int randoNumber = rand() % 10;
+	int randoNumber = std::rand() % 11;
+	
+	std::cout << randoNumber << std::endl;
 	if (randoNumber <= 5)
 		std::cout << getName() + ": has been robotomized successfully 50% of the time."<<std::endl;
 	else

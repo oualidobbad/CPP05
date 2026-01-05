@@ -20,7 +20,8 @@ class AForm
 		const int& getGradeSign() const;
 		const int& getGradeExecute() const;
 
-		virtual void execute(Bureaucrat const & executor) const = 0;
+		void execute(Bureaucrat const & executor) const;
+		virtual void executeExacte(Bureaucrat const& executor) const = 0;
 		virtual ~AForm();
 		
 		void beSigned(Bureaucrat &b);
