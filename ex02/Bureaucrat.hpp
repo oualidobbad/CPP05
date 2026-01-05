@@ -30,12 +30,25 @@ class Bureaucrat
 		~Bureaucrat();
 
 		//methodes getter
-		const std::string getName();
+		const std::string getName() const;
 		const int& getGrade() const;
 
 		void incrementGrade();
     	void decrementGrade();
 		void signForm(AForm& form);
+		void executeForm(AForm const & form) const;
 };
 
 std::ostream& operator<<(std::ostream& out, Bureaucrat& b);
+
+void Bureaucrat::executeForm(AForm const & form) const{
+	try
+	{
+		form.execute(*this);
+		std::cout << getName() + " executed " + form.getName() << std::endl;
+	}
+	catch(std::exception& e)
+	{
+		
+	}
+}
