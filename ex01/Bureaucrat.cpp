@@ -56,10 +56,6 @@ void Bureaucrat::signForm(Form& form)
 	{
 		std::cout << name <<" couldn’t sign "<< form.getName() << " because " << e.what() << std::endl;
 	}
-	catch(const char* e)
-	{
-		std::cerr << e << std::endl;
-	}
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()

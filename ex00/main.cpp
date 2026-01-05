@@ -4,7 +4,8 @@ int main ()
 	
 	try
 	{
-		Bureaucrat obj("oualid", 140);
+		Bureaucrat obj("oualid", 10);
+
 		std::cout << obj << std::endl;
 		obj.decrementGrade();
 		std::cout << obj << std::endl;
