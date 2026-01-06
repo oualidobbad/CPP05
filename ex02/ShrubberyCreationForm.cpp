@@ -12,13 +12,9 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){}
 
-void ShrubberyCreationForm::execute(Bureaucrat const& executor) const{
+void ShrubberyCreationForm::executeExacte() const
+{
 
-	if (getGradeExecute() < executor.getGrade())
-		throw ShrubberyCreationForm::GradeTooLowException();
-	if (!getIsSigned())
-		throw "The Form Not Signed";
-	
 	std::ofstream file;
 	
 	std::string tree = 

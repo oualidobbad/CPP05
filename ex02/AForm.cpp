@@ -57,7 +57,7 @@ void AForm::execute(Bureaucrat const & executor) const
 		throw AForm::GradeTooLowException();
 	if (!getIsSigned())
 		throw "The Form Not Signed";
-	executeExacte(executor);
+	executeExacte();
 }
 
 std::ostream& operator<<(std::ostream& out, const AForm& form)

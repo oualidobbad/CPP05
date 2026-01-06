@@ -15,18 +15,11 @@ RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
-void RobotomyRequestForm::execute(Bureaucrat const& executor) const
+void RobotomyRequestForm::executeExacte() const
 {
-	if (executor.getGrade() > getGradeExecute())
-		throw RobotomyRequestForm::GradeTooLowException();
-	if (!getIsSigned())
-		throw "The Form Not Signed";
+	int randoNumber = std::rand() % 11;
 
 	std::cout << "hererererererererererererererererererererereererererererer" << std::endl;
-
-	int randoNumber = std::rand() % 11;
-	
-	std::cout << randoNumber << std::endl;
 	if (randoNumber <= 5)
 		std::cout << getName() + ": has been robotomized successfully 50% of the time."<<std::endl;
 	else

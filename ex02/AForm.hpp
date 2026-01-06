@@ -21,7 +21,7 @@ class AForm
 		const int& getGradeExecute() const;
 
 		void execute(Bureaucrat const & executor) const;
-		virtual void executeExacte(Bureaucrat const& executor) const = 0;
+		virtual void executeExacte() const = 0;
 		virtual ~AForm();
 		
 		void beSigned(Bureaucrat &b);

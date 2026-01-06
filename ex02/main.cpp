@@ -10,12 +10,12 @@ int main ()
 	try
 	{
 		std::srand(std::time(NULL));
-		// ShrubberyCreationForm shrubbery("home");
+		ShrubberyCreationForm shrubbery("home");
 		// PresidentialPardonForm p("hokoma");
-		RobotomyRequestForm r("oobbad");
+		// RobotomyRequestForm r("oobbad");
 
-		AForm *form = &r;
-		Bureaucrat b("oualid", 6);
+		AForm *form = &shrubbery;
+		Bureaucrat b("oualid", 44);
 
 		b.executeForm(*form);
 		b.signForm(*form);
