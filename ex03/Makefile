@@ -1,8 +1,8 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = AForm.cpp main.cpp RobotomyRequestForm.cpp Bureaucrat.cpp  PresidentialPardonForm.cpp ShrubberyCreationForm.cpp
+SRC = AForm.cpp main.cpp RobotomyRequestForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 OBJ = $(SRC:.cpp=.o)
-NAME = execute_form
+NAME = intern
 
 all: $(NAME)
 
