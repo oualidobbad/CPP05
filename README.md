@@ -1,22 +1,13 @@
-# CPP05
+    # CPP05
 
-## Description
-C++ module focusing on exceptions, bureaucrats, and forms.
+    C++ Module 05: exceptions, Bureaucrat/Form classes, and grade-based permissions.
 
-## Features
-- Grade checks, signing/execution flows, and custom exceptions.
+    ## Topics
+    - Custom exceptions, validation of grade ranges.
+    - Signing/execution flow with derived form types.
 
-## Technologies Used
-- C++98, Makefile.
+    ## Build & Run
+    - `make`; run the binary to simulate form workflows and exception handling.
 
-## Installation
-- Run `make` inside the module.
-
-## Usage
-- Execute the binary to simulate form workflows.
-
-## Example
-- Attempt to sign a form with insufficient grade to trigger exceptions.
-
-## Author
-- Oualid Obbad (@oualidobbad)
+    ## Author
+    Oualid Obbad (@oualidobbad)
